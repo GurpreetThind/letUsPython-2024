@@ -10,4 +10,7 @@ B. I have some pre requisite to completed
 3. Set up Git Desktop
 4. Install Git
 5. Install Github Extensions on VSCode
-6. I want to install Anaconda for my work but I try that later. <Later >
+6. I want to install Anaconda for my work but I try that later. <Later Date to be Decided>
+ 
+ - git branch learn-first created 
+ 
