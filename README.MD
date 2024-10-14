@@ -13,5 +13,5 @@ B. I have some pre requisite to completed
 6. I want to install Anaconda for my work but I try that later. <Later Date to be Decided>
  
  - git branch learn-first created 
- - git branch prd created and set it as default 
- 
+ - git branch prd created and made it a parent merge 
+ - changed main to final progress weekly 
