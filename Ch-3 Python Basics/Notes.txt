@@ -1,0 +1,246 @@
+python
+- Case sensitive language
+----------------------------------------------------------------------
+identifiers
+- variable, functions, class , module, objects etc.
+- Rules :
+---- Starts with alphabets or an underscore 
+---- Followed by Zero or more letters , underscore and digits 
+---- keywords can not be an identifiers
+
+keywords are lower case 
+33 in total
+import keyword 
+print(keyword.kwlist)
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+----------------------------------------------------------------------
+- Python Types: 3 in total
+Basic Types - int float complex bool string bytes
+Container Types - list, tuple, set, dict
+User-defined Types - class
+
+----------------------------------------------------------------------
+
+Basic Types
+-int 
+(Range: As much as you want )
+-- Binary (starts with 0b/0B)
+--- decimal 
+---- octal (starts with 0o/0O)
+----- hexdecimal (starts with 0x/0X)
+
+-float (can be represneted in fractional or Exponent form)
+--(Range: 1.8 * 10^308)
+
+-Boolean (True (generally =1 but also a non-zero number) False (0))
+
+-complex (a+ib or c+jd)
+
+-String 
+--immutable
+--collection of letters in '' or ""
+
+-bytes
+--represents binary data b'\xab\xe5\xcd' represents hexadecimal data abe5cd'
+
+----------------------------------------------------------------------
+
+Type check
+ print(type(35))
+ print(type(3.14))
+ print(type(b'\xfb\xe3\xc0'))
+
+o/p
+<class 'int'>
+<class 'float'>
+<class 'bytes'>
+
+
+----------------------------------------------------------------------
+
+Variable type and Assignment 
+- no need to define (dynamically-typed)
+- simple variable assignment a=10; b=5 ;c= 'new'
+- multiple variable assignment a,b,c=10,5,'new' 
+
+----------------------------------------------------------------------
+
+Aritmetic Operators
+
++ - * / % // **
+/ - yield true division with float values
+% - yiells remainder
+// -- Quotient 
+
+----------------------------------------------------------------------
+
+Other Nuances:
+
+Floor
+-largest number equal to or less than quotient 
+-a%b = a-b(*(a//b))
+
+s/b*c = s*c/b in math 
+a= True+True
+
+----------------------------------------------------------------------
+
+Precedence and Associativity 
+- multiple Operators are used 
+
+() >>> ** >>> * / // % >>> + - 
+
+Aritmetic operators have left to right Associativity
+so a*b/c will have a*b first and then divided by c
+left to right if a tie happens between "/, //, %, *" or "+ , - "
+
+-----------------------------------------------------------------------
+
+Conversions 
+
+- Mixed mode operations 
+ int and float - yields float 
+ int and complex - yields complex
+ float and complex - yield complex 
+
+convert one type to another 
+
+use - int() float() complex() bool()
+
+int(float/string) OR int(numeric string, base)
+float(float/string) OR float (int)
+complex(int/float) OR complext(int/float, int/float)
+bool(int/float)
+str(int/float/bool)
+chr(int) - yields character corresponding to int 
+
+
+------------------------------------------------------------------
+
+Built-in functions
+
+- many built in functions are present in python
+help(function)
+example: help(print)
+
+related to numbers such as 
+
+abs(x)
+pow(x,y)
+min(x1,x2,...)
+max(x1,x2,...)
+divmod(x,y) -- returns pair of (x//y,x%y)
+round(x,[n]) -- returns round of to n digits 
+bin(x)
+hex(x)
+oct(x)
+
+------------------------------------------------------------------------
+
+Built In Modules
+
+- Module contains many functions 
+- many modules are available in python
+- For example to do math : math , cmath (complex math), decimal (decimal), random (random number generation )
+
+round(x,n) is builtin function
+similar to that math provides: ceil(x) trunc(x) floor(x)
+
+To use a func of module, we need to import it 
+
+###check builtin functions list of a module
+Eg:
+import math
+
+print(dir(__builtins__))
+
+OR
+
+print(dir(math))
+
+
+-----------------------------------------------------------------------
+
+Container Types
+
+- Multiple values stored together 
+- List
+--------indexed collection of similar /disimilar entieties
+--------values can be accessed via position of it 
+--------values can be accessed via for loop 
+- Tuple 
+--------indexed collection of immutable collection 
+--------values can be accessed via position of it 
+--------values can be accessed via for loop 
+-Set
+--------collection of unique values 
+-dict
+--------collection of key-value pair with unique 'key' 
+
+------------------------------------------------------------------
+
+Python Type Jargons:
+
+collection - generic term for container type
+sequence - generic term for ordered collection
+Iterable - collection that can be iterable using a loop
+ordered - elements are stored in which they are inserted. Also can be accesed via indexing 
+Unordered - elements are not stored in which they are inserted. hence cannot access via indexing  
+immutable - unchangeable collection
+mutable - changeable collection
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                                                      +
++ Type ------ ordered ------ immutable ------ Iterable +       
++                                                      +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+String ------ yes ---------- yes ------------ yes
+List -------- yes ---------- No ------------- yes
+Tuple ------- yes ---------- yes ------------ yes
+Set --------- No ----------- No ------------- yes
+Dictionary -- No ----------- No ------------- yes
+
+
+
+--------------------------------------------------------------------------
+
+Comments and Indentation 
+
+-- Comments start with #
+-- Multiline comments start with """ or ''' and ends with """ or '''
+-- Spacing matters so be careful 
+
+--------------------------------------------------------------------------
+
+Multiline
+
+- can be written with \ at the end 
+actual=b+c+d\
+  e+f+g \
+  n+m 
+
+With in () or {} or [] don't need \
+
+days = ['mon', 'tue,' 'wed', 'thu',
+  'fri', 'sat', 'sun']
+
+------------------------------------------------------------------------
+
+Classes and Objects 
+
+- Every type is a class 
+- int float string dict list set tuple bool complex : are ready made Classes
+- object is created from a class (called instance of class)
+- Class defines -- form and methods of an object 
+- Class has name and object are nameless 
+- objects are refernce via memory address 
+- address of object can be accesed via id(<obj>)
+- whether an object belongs to a particular class can be checked via instanceof(<obj>, <class>)
+
+
+--------------------------------------------------------------------------
+
+Multiple Objects
+
